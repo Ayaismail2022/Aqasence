@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Global Water Quality - Aquasence</title>
+        <link href="images/downld-removebg-preview.png" rel="shortcut icon" type="image/x-icon" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+        <style>
+            /* Custom cursor and styles from other pages for consistency */
+            body, a, button { cursor: none !important; }
+            
+            #cursor-droplet {
+                width: 30px; height: 30px; border-radius: 7px 50% 50% 50%;
+                background-color: rgba(59, 130, 246, 0.4); border: 1px solid rgba(59, 130, 246, 0.7);
+                position: fixed; z-index: 9999; pointer-events: none;
+                opacity: 0; 
+                top: 0; left: 0;
+                transform: translate(-50%, -50%) rotate(45deg); 
+                transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+            }
+            #cursor-droplet.grow {
+                width: 50px; height: 50px;
+                background-color: rgba(59, 130, 246, 0.2);
+            }
+            @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+            
+            .animate-fadeInDown { animation: fadeInDown 0.8s ease-out forwards; }
+        </style>
+    </head>
+    <body class="bg-cyan-50 text-gray-800 flex flex-col min-h-screen">
+
+        <div id="cursor-droplet"></div>
+
+        <!-- ===== HEADER (Consistent with other pages) ===== -->
+        <header class="bg-white/80 backdrop-blur-sm shadow-md p-4 flex justify-between items-center sticky top-0 z-50 animate-fadeInDown">
+            <a href="index.html" class="flex items-center space-x-3 transform hover:scale-105 transition-transform duration-300">
+                <img src="images/downld.png" alt="Aquasence Logo" class="h-10 w-auto">
+                <span class="text-3xl font-bold text-blue-600">Aquasence</span>
+            </a>
+            <nav class="flex items-center space-x-2 md:space-x-4">
+                <a href="index.html" class="px-3 py-2 text-gray-700 font-medium hover:text-blue-600 transform hover:-translate-y-0.5 transition-transform duration-300">Home</a>
+                <a href="about.html" class="px-3 py-2 text-gray-700 font-medium hover:text-blue-600 transform hover:-translate-y-0.5 transition-transform duration-300">About</a>
+                <a href="Contact.html" class="px-3 py-2 text-gray-700 font-medium hover:text-blue-600 transform hover:-translate-y-0.5 transition-transform duration-300">Contact</a>
+                <a href="loading.html" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transform hover:scale-105 transition-transform duration-300">Login</a>
+                <button id="logout-btn" onclick="logout()" style="display: none;" class="px-4 py-2 text-white bg-red-500 rounded-md hover:bg-red-600 transform hover:scale-105 transition-transform duration-300">Log Out</button>
+            </nav>
+        </header>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="flex-grow">
+           
+        </main>
+
+        <!-- ===== FOOTER (Consistent with other pages) ===== -->
+        <footer class="bg-gray-900 text-gray-300">
+            <!-- Footer content is the same -->
+        </footer>
+
+        <!-- ===== SCRIPTS (Consistent with other pages) ===== -->
+        
+    </body>
+</html>
